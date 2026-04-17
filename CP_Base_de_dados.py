@@ -34,18 +34,6 @@ df = pd.DataFrame(data)
 # 2. CÁLCULO DE COERÊNCIA (A 16ª coluna)
 df['IMC'] = (df['Peso_kg'] / (df['Altura_m']**2)).round(2)
 
-# 3. VALIDAÇÃO E EXIBIÇÃO NO TERMINAL (Ideal para prints dos slides)
-print("\n" + "="*40)
-print("    ---RELATÓRIO DE VALIDAÇÃO---      ")
-print("="*40)
-print(f"Total de Linhas: {df.shape[0]}")
-print(f"Total de Colunas: {df.shape[1]}")
-print(f"Valores Nulos: {df.isnull().sum().sum()}")
-print("-"*40)
-print("AMOSTRA DOS DADOS (Primeiras 5 linhas):")
-print(df[['Nome_Completo', 'Tipo_Sanguineo', 'Idade', 'IMC']].head())
-print("="*40)
-
 # 4. EXPORTAÇÃO
 df.to_excel("Checkpoint2_Saude_Final.xlsx", index=False)
 print("\nArquivo 'Checkpoint2_Saude_Final.xlsx' gerado com sucesso!")
