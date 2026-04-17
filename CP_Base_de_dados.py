@@ -4,12 +4,6 @@ import numpy as np
 # Configuração para reprodutibilidade
 np.random.seed(42)
 
-#import pandas as pd
-import numpy as np
-
-# Configuração para reprodutibilidade
-np.random.seed(42)
-
 # 1. GERAÇÃO DA BASE (120 linhas e 16 colunas)
 n_registros = 120
 
@@ -42,7 +36,7 @@ df['IMC'] = (df['Peso_kg'] / (df['Altura_m']**2)).round(2)
 
 # 3. VALIDAÇÃO E EXIBIÇÃO NO TERMINAL (Ideal para prints dos slides)
 print("\n" + "="*40)
-print("      RELATÓRIO DE VALIDAÇÃO FIAP      ")
+print("    ---RELATÓRIO DE VALIDAÇÃO---      ")
 print("="*40)
 print(f"Total de Linhas: {df.shape[0]}")
 print(f"Total de Colunas: {df.shape[1]}")
